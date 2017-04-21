@@ -27,7 +27,7 @@ import {merge} from 'util.mergePackages';
 let dst = fs.readFileSync('package.a.json');
 let src = fs.readFileSync('package.b.json');
 
-// Create a new `package.json`
+// Create a new `package.json` as a string
 console.log(merge(dst, src));
 ```
 
@@ -67,4 +67,4 @@ results in:
 }
 ```
 
-This module was inspired by the existing module @ https://github.com/izaakschroeder/package-merge.  This module uses typescript, creates typings, and adds it to an CI/CD process.
+This module was inspired by the existing module @ https://github.com/izaakschroeder/package-merge.  This module uses [Typescript](https://www.typescriptlang.org/), creates typings, uses the [ava test runner](https://github.com/avajs/ava), and adds it to the [Travis CI/CD](https://travis-ci.org/) process.
