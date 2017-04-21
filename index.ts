@@ -2,6 +2,7 @@
 
 import * as _ from 'lodash';
 import * as semver from 'semver';
+import {encoding} from 'util.toolbox';
 
 const json = require('jju');
 const intersect = require('semver-set').intersect;
@@ -44,8 +45,26 @@ function combine(dst: any, src: any) {
 	}));
 }
 
-export default function merge(dst: string | object, src: string | object) {
+/**
+ * Takes two input objects and attempts to merge them together.  This function
+ * should be used for package.json files.  This function will take special care
+ * to merge dependencies (and their versions), scripts, and keyword sections
+ * of the package.json file.
+ * @param dst {string|Buffer|object} the target object for the merge
+ * @param src {string|Buffer|object} the source object for the merge
+ * @returns {string} a merged object string in JSON format.
+ */
+export default function merge(dst: string | Buffer | object, src: string | Buffer| object) {
 	let odst = dst;
+
+	if (dst instanceof Buffer) {
+		dst = dst.toString(encoding);
+	}
+
+	if (src instanceof Buffer) {
+		src = src.toString(encoding);
+	}
+
 	if (typeof dst === 'object') {
 		odst = JSON.stringify(dst);
 	}

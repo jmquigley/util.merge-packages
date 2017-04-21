@@ -182,3 +182,22 @@ test('Combining empty destination with a partial JSON', t => {
 		t.fail(err.message);
 	}
 });
+
+test('Combine a regular package.json with a dependencies using Buffer objects', t => {
+	const fixture = new Fixture('basic');
+	const result = merge(
+		new Buffer(fixture.read('complete.json')),
+		new Buffer(fixture.read('dependencies.json'))
+	);
+
+	try {
+		const pkg = JSON.parse(result);
+		t.truthy(pkg);
+		t.is(pkg.dependencies.async, '^0.8.6');
+		t.is(pkg.dependencies.cheese, '^1.1.2');
+		t.is(pkg.dependencies.express, '^5.0.0');
+		t.is(pkg.dependencies.bigpipe, 'bigpipe/pagelet#branch');
+	} catch (err) {
+		t.fail(err.message);
+	}
+});
