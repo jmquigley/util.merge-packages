@@ -1,0 +1,55 @@
+{
+  "name": "util.mergePackage",
+  "version": "0.0.0",
+  "author": "jmquigley <jmquigley@outlook.com>",
+  "description": "Merges the contents of two package.json files",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmquigley/util.mergePackage"
+  },
+  "bugs": {
+    "url": "https://github.com/jmquigley/util.mergePackage/issues"
+  },
+  "engines": {
+    "node": ">=7.5"
+  },
+  "dependencies": {
+    "jju": "^1.3.0",
+    "lodash": "^4.17.4",
+    "semver": "^5.3.0",
+    "semver-set": "^0.1.1",
+    "util.pkgwrap": "0.0.26",
+    "uuid": "^3.0.1",
+    "yargs": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^2.1.0",
+    "@types/lodash": "^4.14.62",
+    "@types/node": "^7.0.13",
+    "@types/semver": "^5.3.31",
+    "@types/yargs": "^6.6.0",
+    "ava": "^0.19.1",
+    "coveralls": "^2.13.0",
+    "fs-extra": "^2.1.2",
+    "nyc": "^10.2.0",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2",
+    "util.fixture": "0.0.49"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "bin": {
+    "pkgmerge": "./cli.js"
+  },
+  "scripts": {
+    "all": "npm install && npm run lint && npm run build && npm test && npm run report",
+    "build": "./node_modules/.bin/pkgwrap --build",
+    "coverage": "./node_modules/.bin/pkgwrap --coverage",
+    "lint": "./node_modules/.bin/pkgwrap --lint",
+    "postinstall": "./node_modules/.bin/pkgwrap --postinstall",
+    "report": "./node_modules/.bin/pkgwrap --reporting",
+    "test": "./node_modules/.bin/pkgwrap --testing --ava"
+  }
+}
