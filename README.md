@@ -1,4 +1,4 @@
-# util.mergePackages [![Build Status](https://travis-ci.org/jmquigley/util.mergePackage.svg?branch=master)](https://travis-ci.org/jmquigley/util.mergePackage) [![tslint code style](https://img.shields.io/badge/code_style-TSlint-5ed9c7.svg)](https://palantir.github.io/tslint/) [![Test Runner](https://img.shields.io/badge/testing-ava-blue.svg)](https://github.com/avajs/ava) [![NPM](https://img.shields.io/npm/v/util.mergePackage.svg)](https://www.npmjs.com/package/util.mergePackage) [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.mergePackage/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.mergePackage?branch=master)
+# util.merge-packages [![Build Status](https://travis-ci.org/jmquigley/util.merge-packages.svg?branch=master)](https://travis-ci.org/jmquigley/util.merge-packages) [![tslint code style](https://img.shields.io/badge/code_style-TSlint-5ed9c7.svg)](https://palantir.github.io/tslint/) [![Test Runner](https://img.shields.io/badge/testing-ava-blue.svg)](https://github.com/avajs/ava) [![NPM](https://img.shields.io/npm/v/util.merge-packages.svg)](https://www.npmjs.com/package/util.merge-packages) [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.merge-packages/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.merge-packages?branch=master)
 
 > Merges the contents of two package.json files
 
@@ -9,7 +9,12 @@ It attempts to combine two separate `package.json` files into one, respecting as
 
 To install as an application dependency:
 ```
-$ npm install --save util.mergePackages
+$ npm install --save util.merge-packages
+```
+
+To install globally (for the CLI):
+```
+$ npm install -g util.merge-packages
 ```
 
 To build the app and run all tests:
@@ -66,5 +71,16 @@ results in:
     }
 }
 ```
+
+
+## CLI
+The tool installs a command line version of this library to a program named ``pkgmerge``.  It uses the following options:
+
+```
+pkgmerge --out={filename}|./out.json --f1={file1.json} --f2={file2.json}
+```
+
+This will take file2.json (f2), merge it into file1.json (f1) and save the output to the filename given in the ``--out`` parameter.
+
 
 This module was inspired by the existing module @ https://github.com/izaakschroeder/package-merge.  This module uses [Typescript](https://www.typescriptlang.org/), creates typings, uses the [ava test runner](https://github.com/avajs/ava), and adds it to the [Travis CI/CD](https://travis-ci.org/) process.

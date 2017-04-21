@@ -1,5 +1,5 @@
 {
-  "name": "util.mergePackages",
+  "name": "util.merge-packages",
   "version": "0.0.0",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Merges the contents of two package.json files",
@@ -7,10 +7,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmquigley/util.mergePackages"
+    "url": "https://github.com/jmquigley/util.merge-packages"
   },
   "bugs": {
-    "url": "https://github.com/jmquigley/util.mergePackages/issues"
+    "url": "https://github.com/jmquigley/util.merge-packages/issues"
   },
   "engines": {
     "node": ">=7.5"
