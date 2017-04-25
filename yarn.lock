@@ -43,9 +43,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/lodash@^4.14.62":
-  version "4.14.62"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.62.tgz#8674f9861582148a60b7a89cb260f11378d11683"
+"@types/lodash@^4.14.63":
+  version "4.14.63"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.63.tgz#5ac475f55bfdc62bc88c4239dbc482f2f3bead93"
 
 "@types/node@*", "@types/node@^7.0.13":
   version "7.0.13"
@@ -128,11 +128,11 @@ archy@^1.0.0:
   resolved "https://registry.yarnpkg.com/archy/-/archy-1.0.0.tgz#f9c8c13757cc1dd7bc379ac77b2c62a5c2868c40"
 
 are-we-there-yet@~1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/are-we-there-yet/-/are-we-there-yet-1.1.2.tgz#80e470e95a084794fe1899262c5667c6e88de1b3"
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/are-we-there-yet/-/are-we-there-yet-1.1.4.tgz#bb5dca382bb94f05e15194373d16fd3ba1ca110d"
   dependencies:
     delegates "^1.0.0"
-    readable-stream "^2.0.0 || ^1.1.13"
+    readable-stream "^2.0.6"
 
 argparse@^1.0.7:
   version "1.0.9"
@@ -1260,8 +1260,8 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     rimraf "2"
 
 gauge@~2.7.1:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.3.tgz#1c23855f962f17b3ad3d0dc7443f304542edfe09"
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
   dependencies:
     aproba "^1.0.3"
     console-control-strings "^1.0.0"
@@ -1546,7 +1546,7 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-buffer@^1.0.2:
+is-buffer@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.5.tgz#1f3b26ef613b214b88cbca23cc6c01d87961eecc"
 
@@ -1894,16 +1894,14 @@ jsprim@^1.2.2:
     verror "1.3.6"
 
 kind-of@^3.0.2:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.1.0.tgz#475d698a5e49ff5e53d14e3e732429dc8bf4cf47"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.0.tgz#b58abe4d5c044ad33726a8c1525b48cf891bff07"
   dependencies:
-    is-buffer "^1.0.2"
+    is-buffer "^1.1.5"
 
-klaw-sync@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-1.1.2.tgz#b5bc67a244e261b0ea71d97e586ea0521e734a9a"
-  dependencies:
-    micromatch "^2.3.11"
+klaw-sync@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-2.0.0.tgz#dbe0f153d03f8f33ff936c06d4393ccec502c883"
   optionalDependencies:
     graceful-fs "^4.1.11"
 
@@ -2181,8 +2179,8 @@ nopt@^4.0.1:
     osenv "^0.1.4"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.3.6.tgz#498fa420c96401f787402ba21e600def9f981fff"
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.3.8.tgz#d819eda2a9dedbd1ffa563ea4071d936782295bb"
   dependencies:
     hosted-git-info "^2.1.4"
     is-builtin-module "^1.0.0"
@@ -2570,7 +2568,7 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-"readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2, readable-stream@^2.1.4, readable-stream@^2.1.5:
+readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.1.5:
   version "2.2.9"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.9.tgz#cf78ec6f4a6d1eb43d26488cac97f042e74b7fc8"
   dependencies:
@@ -2622,10 +2620,11 @@ regexpu-core@^2.0.0:
     regjsparser "^0.1.4"
 
 registry-auth-token@^3.0.1:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.2.0.tgz#5bf3bd4608a2dd9242542c44d66ad8a5f9cdd3b0"
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.3.0.tgz#57ae67347e73d96345ed1bc01294c7237c02aa63"
   dependencies:
     rc "^1.1.6"
+    safe-buffer "^5.0.1"
 
 registry-url@^3.0.3:
   version "3.1.0"
@@ -2894,8 +2893,8 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 stack-utils@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.0.tgz#2392cd8ddbd222492ed6c047960f7414b46c0f83"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.1.tgz#d4f33ab54e8e38778b0ca5cfd3b3afb12db68620"
 
 string-template@^1.0.0:
   version "1.0.0"
@@ -3161,48 +3160,48 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-util.chdir@0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/util.chdir/-/util.chdir-0.0.24.tgz#390880717c69e9bb93cc65d10ca1d104853e5c87"
+util.chdir@0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/util.chdir/-/util.chdir-0.0.25.tgz#ca6cfded6ee2ad9a3f0b294a91c3784579174095"
   dependencies:
     fs-extra "^2.1.2"
     util.pkgwrap "0.0.26"
 
-util.filelist@0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/util.filelist/-/util.filelist-0.0.19.tgz#cec3f4eae655ef5fbd3e019faf53a33d29717c56"
+util.filelist@0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/util.filelist/-/util.filelist-0.0.20.tgz#bf5d4ce37f9c4520a7a4eacec3db6d82b5492e98"
   dependencies:
     fs-extra "^2.1.2"
     util.pkgwrap "0.0.26"
-    util.rstrip "0.0.16"
+    util.rstrip "0.0.17"
 
-util.fixture@0.0.49:
-  version "0.0.49"
-  resolved "https://registry.yarnpkg.com/util.fixture/-/util.fixture-0.0.49.tgz#1eadd4b4625eb1bdb6d4303e27ba723489f0ef04"
+util.fixture@0.0.50:
+  version "0.0.50"
+  resolved "https://registry.yarnpkg.com/util.fixture/-/util.fixture-0.0.50.tgz#fa4df02332178a6b66005255220f6810501837e5"
   dependencies:
     fs-extra "^2.1.2"
-    klaw-sync "^1.1.2"
+    klaw-sync "^2.0.0"
     string-template "^1.0.0"
-    util.chdir "0.0.24"
-    util.filelist "0.0.19"
-    util.join "0.0.7"
+    util.chdir "0.0.25"
+    util.filelist "0.0.20"
+    util.join "0.0.8"
     util.pkgwrap "0.0.26"
-    util.toolbox "0.0.25"
-    util.wait "0.0.19"
+    util.toolbox "0.0.26"
+    util.wait "0.0.21"
     uuid "^3.0.1"
 
-util.home@0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/util.home/-/util.home-0.0.13.tgz#b5594334ccae2c28dcfd1098d3aff7fd729e6f21"
+util.home@0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/util.home/-/util.home-0.0.14.tgz#28ce64af8278036fc9bf9f1ff7c25bfc3f0e527a"
   dependencies:
     util.pkgwrap "0.0.26"
-    util.toolbox "0.0.25"
+    util.toolbox "0.0.26"
 
-util.join@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/util.join/-/util.join-0.0.7.tgz#581b8f13b7e0044aabd381be003e29c6c7d2eeb4"
+util.join@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/util.join/-/util.join-0.0.8.tgz#ad01e8942783bc6b0bfce7cbb2d97feb51e4ea56"
   dependencies:
-    util.home "0.0.13"
+    util.home "0.0.14"
     util.pkgwrap "0.0.26"
 
 util.pkgwrap@0.0.26:
@@ -3214,22 +3213,22 @@ util.pkgwrap@0.0.26:
     lodash "^4.17.4"
     yargs "^7.1.0"
 
-util.rstrip@0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.16.tgz#672c83249cb5707b64822389f1466d5bda218a22"
+util.rstrip@0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.17.tgz#3f0457da48fa74dd9f2743eac83ffaced3409fa3"
   dependencies:
     util.pkgwrap "0.0.26"
 
-util.toolbox@0.0.25:
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.25.tgz#6c4eaacda789baf7e4a354e92124d293a9e91edf"
+util.toolbox@0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.26.tgz#f8397762a59450d0d5e7e32aeb32da7febc3e87a"
   dependencies:
     util.pkgwrap "0.0.26"
-    util.rstrip "0.0.16"
+    util.rstrip "0.0.17"
 
-util.wait@0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/util.wait/-/util.wait-0.0.19.tgz#ff04a5b33777532ccd5279311b58c5c87cbbdf2d"
+util.wait@0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/util.wait/-/util.wait-0.0.21.tgz#82525e8ccbfd090ab6618a657b610709f811517d"
   dependencies:
     util.pkgwrap "0.0.26"
 
@@ -3296,8 +3295,8 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 write-file-atomic@^1.1.2, write-file-atomic@^1.1.4:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.1.tgz#7d45ba32316328dd1ec7d90f60ebc0d845bb759a"
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.3.tgz#831dd22d491bdc135180bb996a0eb3f8bf587791"
   dependencies:
     graceful-fs "^4.1.11"
     imurmurhash "^0.1.4"
