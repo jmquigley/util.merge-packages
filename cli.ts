@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-/**
- * Command line that allows one to combine two package.json files together.
- */
+//
+// Command line that allows one to combine two package.json files together.
+//
 
 'use strict';
 
