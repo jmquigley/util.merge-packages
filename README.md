@@ -7,19 +7,21 @@ It attempts to combine two separate `package.json` files into one, respecting as
 
 ## Installation
 
+This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
+
 To install as an application dependency:
 ```
-$ npm install --save util.merge-packages
+$ yarn add --dev util.merge-packages
 ```
 
 To install globally (for the CLI):
 ```
-$ npm install -g util.merge-packages
+$ yarn global add util.merge-packages
 ```
 
 To build the app and run all tests:
 ```
-$ npm run all
+$ yarn run all
 ```
 
 
