@@ -22,34 +22,34 @@
     "lodash": "^4.17.4",
     "semver": "^5.4.1",
     "semver-set": "^0.1.1",
-    "util.toolbox": "0.0.53",
+    "util.toolbox": "0.0.56",
     "uuid": "^3.1.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
     "@types/fs-extra": "^4.0.5",
-    "@types/lodash": "^4.14.85",
-    "@types/node": "^8.0.53",
+    "@types/lodash": "^4.14.87",
+    "@types/node": "^8.0.54",
     "@types/semver": "^5.4.0",
     "@types/yargs": "^8.0.2",
-    "ava": "^0.23.0",
+    "ava": "^0.24.0",
     "coveralls": "^3.0.0",
     "fs-extra": "^4.0.2",
     "nyc": "^11.3.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "util.fixture": "0.0.59"
+    "typescript": "^2.6.2",
+    "util.fixture": "0.0.61",
+    "util.pkgwrap": "^0.0.88"
   },
   "bin": {
     "pkgmerge": "./cli.js"
   },
   "scripts": {
     "all": "yarn install && yarn run build && yarn test && yarn run report",
-    "build": "yarn run clean && yarn run lint && pkgwrap --build",
+    "build": "yarn clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
     "lint": "pkgwrap --lint",
-    "preinstall": "yarn global add util.pkgwrap",
     "prepublishOnly": "yarn run all",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava"
