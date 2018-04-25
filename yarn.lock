@@ -66,9 +66,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/lodash@^4.14.107":
-  version "4.14.107"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.107.tgz#b2d2ae3958bfb8ff828495cbe12214af9e4d035e"
+"@types/lodash@^4.14.108":
+  version "4.14.108"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.108.tgz#02656af3add2e5b3174f830862c47421c00ef817"
 
 "@types/node@*":
   version "8.0.53"
@@ -2684,6 +2684,10 @@ lodash@^3.9.3:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+
 lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
@@ -4213,9 +4217,9 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-typescript@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.1.tgz#6160e4f8f195d5ba81d4876f9c0cc1fbc0820624"
+typescript@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.3.tgz#5d817f9b6f31bb871835f4edf0089f21abe6c170"
 
 typical@^2.4.2, typical@^2.6.0, typical@^2.6.1:
   version "2.6.1"
@@ -4328,52 +4332,52 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-util.chdir@0.0.34:
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/util.chdir/-/util.chdir-0.0.34.tgz#271a1c97c79c9afc9828ab152899684df6c45ac6"
+util.chdir@0.0.35:
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/util.chdir/-/util.chdir-0.0.35.tgz#324f9a5be4c078fafd2258415cc5cb2766ea41b6"
   dependencies:
     fs-extra "^5.0.0"
 
-util.constants@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/util.constants/-/util.constants-0.0.9.tgz#3b06dbaa0503f7cf09260e866d264a6478aed763"
+util.constants@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/util.constants/-/util.constants-0.0.10.tgz#70b54f324bf761511a4b9010120206fd693186ac"
 
-util.filelist@0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/util.filelist/-/util.filelist-0.0.28.tgz#d0db0be22ec770ffd9ccf17855f14902599630c8"
+util.filelist@0.0.29:
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/util.filelist/-/util.filelist-0.0.29.tgz#23b06cd2d764b214dca47656028093a88d3816f6"
   dependencies:
     fs-extra "^5.0.0"
-    util.rstrip "0.0.34"
+    util.rstrip "0.0.35"
 
-util.fixture@0.0.62:
-  version "0.0.62"
-  resolved "https://registry.yarnpkg.com/util.fixture/-/util.fixture-0.0.62.tgz#a14636fd1c5cd19b7c750e06461320db631d804a"
+util.fixture@0.0.63:
+  version "0.0.63"
+  resolved "https://registry.yarnpkg.com/util.fixture/-/util.fixture-0.0.63.tgz#87bc31679e08f7616c12b089895b80a30a71121c"
   dependencies:
     fs-extra "^5.0.0"
     klaw-sync "^3.0.2"
-    lodash "^4.17.5"
+    lodash "^4.17.10"
     lorem-ipsum "^1.0.4"
     rimraf "^2.6.2"
     string-template "^1.0.0"
-    util.chdir "0.0.34"
-    util.constants "^0.0.9"
-    util.filelist "0.0.28"
-    util.join "0.0.18"
-    util.toolbox "0.0.58"
-    util.wait "0.0.31"
+    util.chdir "0.0.35"
+    util.constants "^0.0.10"
+    util.filelist "0.0.29"
+    util.join "0.0.19"
+    util.toolbox "0.0.59"
+    util.wait "0.0.32"
     uuid "^3.2.1"
 
-util.home@0.0.23:
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/util.home/-/util.home-0.0.23.tgz#05c008307c78c32234efc4c08c71a84ecc50ba67"
+util.home@0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/util.home/-/util.home-0.0.24.tgz#5cf287559d9f09575300d458d80e1eb51d6cb445"
   dependencies:
-    util.toolbox "0.0.58"
+    util.toolbox "0.0.59"
 
-util.join@0.0.18:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/util.join/-/util.join-0.0.18.tgz#7b6df1e0e7e8b36cb236f1e7017dd36d2983af53"
+util.join@0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/util.join/-/util.join-0.0.19.tgz#586131667ed91b95510ffd23cfed487698568c5b"
   dependencies:
-    util.home "0.0.23"
+    util.home "0.0.24"
 
 util.pkgwrap@^0.0.91:
   version "0.0.91"
@@ -4394,22 +4398,22 @@ util.pkgwrap@^0.0.91:
     workerpool "^2.3.0"
     yargs "^11.0.0"
 
-util.rstrip@0.0.34:
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.34.tgz#ecd9e049b8fa2270992390a337c1f79e7fd6736d"
+util.rstrip@0.0.35:
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.35.tgz#ea0912545f58241a5b8f252585cd8552dd965072"
 
-util.toolbox@0.0.58:
-  version "0.0.58"
-  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.58.tgz#1c9fedb0f49c7771733c6adfe06ef1c68eefbc92"
+util.toolbox@0.0.59:
+  version "0.0.59"
+  resolved "https://registry.yarnpkg.com/util.toolbox/-/util.toolbox-0.0.59.tgz#04a675b39b1568caa55dcccadba1cbda00058fbf"
   dependencies:
     fs-extra "^5.0.0"
-    util.constants "^0.0.9"
-    util.rstrip "0.0.34"
+    util.constants "^0.0.10"
+    util.rstrip "0.0.35"
     uuid "^3.2.1"
 
-util.wait@0.0.31:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/util.wait/-/util.wait-0.0.31.tgz#c9a81e4d32a343af3840f4556a342df06d94c3d3"
+util.wait@0.0.32:
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/util.wait/-/util.wait-0.0.32.tgz#f4b1037c8bd04d7bfe8512b673629c4697c51cab"
 
 uuid@^3.0.0, uuid@^3.1.0:
   version "3.1.0"
