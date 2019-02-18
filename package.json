@@ -1,88 +1,73 @@
 {
-  "name": "util.merge-packages",
-  "version": "0.0.13",
-  "author": "jmquigley <jmquigley@outlook.com>",
-  "description": "Merges the contents of two package.json files",
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "bin": {
-    "pkgmerge": "./cli.js"
-  },
-  "private": false,
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jmquigley/util.merge-packages"
-  },
-  "bugs": {
-    "url": "https://github.com/jmquigley/util.merge-packages/issues"
-  },
-  "engines": {
-    "node": ">=7.x"
-  },
-  "dependencies": {
-    "jju": "^1.4.0",
-    "lodash": "^4.17.11",
-    "semver": "^5.6.0",
-    "semver-set": "^0.1.1",
-    "util.toolbox": "0.0.68",
-    "uuid": "^3.3.2",
-    "yargs": "^12.0.5"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^5.0.4",
-    "@types/lodash": "^4.14.119",
-    "@types/node": "^10.12.18",
-    "@types/semver": "^5.5.0",
-    "@types/yargs": "^12.0.5",
-    "coveralls": "^3.0.2",
-    "fs-extra": "^7.0.1",
-    "jest": "^23.6.0",
-    "tslint": "^5.12.0",
-    "typescript": "^3.2.2",
-    "typescript-babel-jest": "^1.0.5",
-    "util.fixture": "0.0.65",
-    "util.pkgwrap": "^0.0.94"
-  },
-  "pkgwrap": {
-    "cleanup": [
-      "cli.js",
-      "cli.d.ts",
-      "index.js",
-      "index.d.ts"
-    ]
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "ts",
-      "tsx",
-      "json"
-    ],
-    "notify": false,
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "__tests__/helpers"
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-    "transform": {
-      "^.+\\.ts?$": "typescript-babel-jest"
-    },
-    "verbose": false
-  },
-  "scripts": {
-    "all": "yarn install && yarn run build && yarn test",
-    "build": "yarn clean && yarn run lint && pkgwrap --build",
-    "clean": "pkgwrap --clean",
-    "coverage": "pkgwrap --coverage --jest",
-    "lint": "pkgwrap --lint",
-    "prepublishOnly": "yarn run all",
-    "report": "pkgwrap --reporting",
-    "test": "pkgwrap --testing --jest"
-  }
+	"name": "util.merge-packages",
+	"version": "0.0.13",
+	"author": "jmquigley <jmquigley@outlook.com>",
+	"description": "Merges the contents of two package.json files",
+	"private": false,
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jmquigley/util.merge-packages"
+	},
+	"bugs": {
+		"url": "https://github.com/jmquigley/util.merge-packages/issues"
+	},
+	"engines": {
+		"node": ">=7.x"
+	},
+	"main": "./index.min.js",
+	"types": "./index.d.ts",
+	"bin": {
+		"pkgmerge": "./cli.js"
+	},
+	"dependencies": {
+		"jju": "^1.4.0",
+		"lodash": "^4.17.11",
+		"semver": "^5.6.0",
+		"semver-set": "^0.1.1",
+		"util.toolbox": "0.0.69",
+		"uuid": "^3.3.2",
+		"yargs": "^13.2.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.3.3",
+		"@babel/preset-env": "^7.3.1",
+		"@babel/preset-typescript": "^7.3.3",
+		"@babel/runtime": "^7.3.1",
+		"@types/fs-extra": "^5.0.5",
+		"@types/jest": "^24.0.6",
+		"@types/lodash": "^4.14.121",
+		"@types/node": "^11.9.4",
+		"@types/semver": "^5.5.0",
+		"@types/yargs": "^12.0.9",
+		"babel-minify": "^0.5.0",
+		"coveralls": "^3.0.2",
+		"fs-extra": "^7.0.1",
+		"jest": "^24.1.0",
+		"prettier": "^1.16.4",
+		"tslint": "^5.12.1",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.3.3",
+		"util.fixture": "0.0.66",
+		"util.pkgwrap": "^0.0.98"
+	},
+	"pkgwrap": {
+		"cleanup": [
+			"cli.js",
+			"cli.js.map",
+			"cli.d.ts"
+		]
+	},
+	"scripts": {
+		"all": "yarn install && yarn prettier && yarn build && yarn test && yarn minify",
+		"build": "yarn clean && yarn lint && pkgwrap --build",
+		"clean": "pkgwrap --clean",
+		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
+		"coverage": "pkgwrap --coverage --jest",
+		"lint": "pkgwrap --lint",
+		"minify": "minify ./index.js --out-file ./index.min.js",
+		"prepublishOnly": "yarn run all",
+		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\"",
+		"test": "jest"
+	}
 }

@@ -1,16 +1,18 @@
 {
-  "name": "module-name",
-  "version": "",
-  "description": "",
-  "author": "Your Name <you.name@example.org>",
-  "contributors": [{
-		"name": "Foo Bar",
-		"email": "foo.bar@example.com"
-	}],
-  "bin": {
-  	"module-name": "./bin/module-name"
+	"name": "module-name",
+	"version": "",
+	"description": "",
+	"author": "Your Name <you.name@example.org>",
+	"contributors": [
+		{
+			"name": "Foo Bar",
+			"email": "foo.bar@example.com"
+		}
+	],
+	"bin": {
+		"module-name": "./bin/module-name"
 	},
-  "scripts": {
+	"scripts": {
 		"test": "vows --spec --isolate",
 		"start": "node index.js",
 		"prepublish": "coffee --bare --compile --output lib/foo src/foo/*.coffee"
@@ -23,11 +25,7 @@
 	"bugs": {
 		"url": "https://github.com/nodejitsu/browsenpm.org/issues"
 	},
-	"keywords": [
-		"nodejitsu",
-		"example",
-		"browsenpm"
-	],
+	"keywords": ["nodejitsu", "example", "browsenpm"],
 	"dependencies": {
 		"primus": "*",
 		"async": "~0.8.0",
@@ -46,7 +44,6 @@
 	"publishConfig": {
 		"registry": "https://your-private-hosted-npm.registry.nodejitsu.com"
 	},
-
 
 	"license": "MIT"
 }

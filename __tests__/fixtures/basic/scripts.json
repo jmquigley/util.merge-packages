@@ -1,5 +1,5 @@
 {
-    "scripts" : {
-        "build": "tsc -p ."
-    }
+	"scripts": {
+		"build": "tsc -p ."
+	}
 }

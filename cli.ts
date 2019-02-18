@@ -4,35 +4,36 @@
 // Command line that allows one to combine two package.json files together.
 //
 
-'use strict';
+"use strict";
 
-import * as fs from 'fs-extra';
-import {encoding, failure} from 'util.toolbox';
-import merge from './index';
+import * as fs from "fs-extra";
+import {encoding, failure} from "util.toolbox";
+import merge from "./index";
 
-const yargs = require('yargs')
-	.usage('Usage: $0 --out=out.json')
-	.option('out', {
-		alias: 'o',
-		default: './out.json',
-		describe: 'The destination output JSON file',
+const yargs = require("yargs")
+	.usage("Usage: $0 --out=out.json")
+	.option("out", {
+		alias: "o",
+		default: "./out.json",
+		describe: "The destination output JSON file",
 		nargs: 1
 	})
-	.option('f1', {
-		describe: 'A package.json type file #1 to merge',
+	.option("f1", {
+		describe: "A package.json type file #1 to merge",
 		nargs: 1
 	})
-	.option('f2', {
-		describe: 'A package.json type file #2 to merge',
+	.option("f2", {
+		describe: "A package.json type file #2 to merge",
 		nargs: 1
 	})
-	.demandOption(['out', 'f1', 'f2'])
+	.demandOption(["out", "f1", "f2"])
 	.version()
 	.help()
-	.showHelpOnFail(false, 'Specify --help for available options')
-	.example('pkgmerge --out=./out.json --f1=test/fixtures/basic/complete.json --f2=test/fixtures/basic/dependencies.json',
-		'Basic example that shows how to run an existing test fixutre and create an output file.')
-	.argv;
+	.showHelpOnFail(false, "Specify --help for available options")
+	.example(
+		"pkgmerge --out=./out.json --f1=test/fixtures/basic/complete.json --f2=test/fixtures/basic/dependencies.json",
+		"Basic example that shows how to run an existing test fixutre and create an output file."
+	).argv;
 
 function getFile(filename: string) {
 	if (fs.existsSync(filename)) {
@@ -40,7 +41,7 @@ function getFile(filename: string) {
 	} else {
 		console.error(`${filename} does not exits`);
 		process.exit(failure);
-		return '';
+		return "";
 	}
 }
 

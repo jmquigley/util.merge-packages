@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-import * as _ from 'lodash';
-import * as semver from 'semver';
-import {encoding} from 'util.toolbox';
+import * as _ from "lodash";
+import * as semver from "semver";
+import {encoding} from "util.toolbox";
 
-const json = require('jju');
-const intersect = require('semver-set').intersect;
+const json = require("jju");
+const intersect = require("semver-set").intersect;
 
 const handlers = {
 	keywords: unique,
@@ -31,18 +31,36 @@ function unique(dst: string[] = [], src: string[] = []) {
 }
 
 function updateDependencies(dst: any, src: any) {
-	return _.isEmpty(dst) ? src : Object.assign({}, dst, _.mapValues(src, (version, dep) => {
-		// We need to check if both are indeed semver ranges in order to do
-		// intersects – some may be git urls or other such things.
-		const isSem = semver.validRange(version) && semver.validRange(dst[dep]);
-		return isSem ? intersect(version, dst[dep]) || version : version;
-	}));
+	return _.isEmpty(dst)
+		? src
+		: Object.assign(
+				{},
+				dst,
+				_.mapValues(src, (version, dep) => {
+					// We need to check if both are indeed semver ranges in order to do
+					// intersects – some may be git urls or other such things.
+					const isSem =
+						semver.validRange(version) &&
+						semver.validRange(dst[dep]);
+					return isSem
+						? intersect(version, dst[dep]) || version
+						: version;
+				})
+		  );
 }
 
 function combine(dst: any, src: any) {
-	return _.isEmpty(dst) ? src : Object.assign({}, dst, _.mapValues(src, (value, key) => {
-		return _.has(handlers, key) ? handlers[key](dst[key], value) : value;
-	}));
+	return _.isEmpty(dst)
+		? src
+		: Object.assign(
+				{},
+				dst,
+				_.mapValues(src, (value, key) => {
+					return _.has(handlers, key)
+						? handlers[key](dst[key], value)
+						: value;
+				})
+		  );
 }
 
 /**
@@ -54,7 +72,10 @@ function combine(dst: any, src: any) {
  * @param src {string|Buffer|object} the source object for the merge
  * @returns {string} a merged object string in JSON format.
  */
-export default function merge(dst: string | Buffer | object, src: string | Buffer| object) {
+export default function merge(
+	dst: string | Buffer | object,
+	src: string | Buffer | object
+) {
 	let odst = dst;
 
 	if (dst instanceof Buffer) {
@@ -65,15 +86,15 @@ export default function merge(dst: string | Buffer | object, src: string | Buffe
 		src = src.toString(encoding);
 	}
 
-	if (typeof dst === 'object') {
+	if (typeof dst === "object") {
 		odst = JSON.stringify(dst);
 	}
 
-	if (typeof dst === 'string') {
+	if (typeof dst === "string") {
 		dst = JSON.parse(dst);
 	}
 
-	if (typeof src === 'string') {
+	if (typeof src === "string") {
 		src = JSON.parse(src);
 	}
 
