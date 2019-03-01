@@ -15,41 +15,51 @@
 	"engines": {
 		"node": ">=7.x"
 	},
-	"main": "./index.min.js",
-	"types": "./index.d.ts",
 	"bin": {
 		"pkgmerge": "./cli.js"
 	},
+	"main": "./index.umd.min.js",
+	"module": "./index.es.min.js",
+	"types": "./index.d.ts",
+	"files": [
+		"cli.js",
+		"index.js",
+		"index.*.min.js",
+		"index.d.ts"
+	],
 	"dependencies": {
 		"jju": "^1.4.0",
 		"lodash": "^4.17.11",
 		"semver": "^5.6.0",
 		"semver-set": "^0.1.1",
-		"util.toolbox": "0.0.69",
+		"util.toolbox": "0.0.70",
 		"uuid": "^3.3.2",
 		"yargs": "^13.2.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.3.3",
-		"@babel/preset-env": "^7.3.1",
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.3.4",
+		"@babel/plugin-transform-modules-umd": "^7.2.0",
+		"@babel/preset-env": "^7.3.4",
 		"@babel/preset-typescript": "^7.3.3",
-		"@babel/runtime": "^7.3.1",
+		"@babel/runtime": "^7.3.4",
 		"@types/fs-extra": "^5.0.5",
-		"@types/jest": "^24.0.6",
+		"@types/jest": "^24.0.9",
 		"@types/lodash": "^4.14.121",
-		"@types/node": "^11.9.4",
+		"@types/node": "^11.9.6",
 		"@types/semver": "^5.5.0",
 		"@types/yargs": "^12.0.9",
 		"babel-minify": "^0.5.0",
-		"coveralls": "^3.0.2",
+		"babel-preset-minify": "^0.5.0",
+		"coveralls": "^3.0.3",
 		"fs-extra": "^7.0.1",
 		"jest": "^24.1.0",
 		"prettier": "^1.16.4",
-		"tslint": "^5.12.1",
+		"tslint": "^5.13.0",
 		"tslint-config-prettier": "^1.18.0",
-		"typescript": "^3.3.3",
-		"util.fixture": "0.0.66",
-		"util.pkgwrap": "^0.0.98"
+		"typescript": "^3.3.3333",
+		"util.fixture": "0.0.68",
+		"util.pkgwrap": "^0.0.102"
 	},
 	"pkgwrap": {
 		"cleanup": [
@@ -59,13 +69,14 @@
 		]
 	},
 	"scripts": {
-		"all": "yarn install && yarn prettier && yarn build && yarn test && yarn minify",
-		"build": "yarn clean && yarn lint && pkgwrap --build",
+		"all": "yarn install && yarn build && yarn test",
+		"build": "yarn clean && yarn lint && yarn prettier && yarn build:es && yarn build:umd",
+		"build:es": "tsc -p . && minify index.js --out-file index.es.min.js",
+		"build:umd": "babel index.js --out-file index.umd.min.js",
 		"clean": "pkgwrap --clean",
 		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
 		"coverage": "pkgwrap --coverage --jest",
 		"lint": "pkgwrap --lint",
-		"minify": "minify ./index.js --out-file ./index.min.js",
 		"prepublishOnly": "yarn run all",
 		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\"",
 		"test": "jest"
