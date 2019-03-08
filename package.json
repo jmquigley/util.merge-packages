@@ -32,9 +32,9 @@
 		"lodash": "^4.17.11",
 		"semver": "^5.6.0",
 		"semver-set": "^0.1.1",
-		"util.toolbox": "0.0.70",
+		"util.toolbox": "0.0.73",
 		"uuid": "^3.3.2",
-		"yargs": "^13.2.1"
+		"yargs": "^13.2.2"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
@@ -45,21 +45,21 @@
 		"@babel/runtime": "^7.3.4",
 		"@types/fs-extra": "^5.0.5",
 		"@types/jest": "^24.0.9",
-		"@types/lodash": "^4.14.121",
-		"@types/node": "^11.9.6",
+		"@types/lodash": "^4.14.122",
+		"@types/node": "^11.10.5",
 		"@types/semver": "^5.5.0",
 		"@types/yargs": "^12.0.9",
 		"babel-minify": "^0.5.0",
 		"babel-preset-minify": "^0.5.0",
 		"coveralls": "^3.0.3",
 		"fs-extra": "^7.0.1",
-		"jest": "^24.1.0",
+		"jest": "^24.3.1",
 		"prettier": "^1.16.4",
-		"tslint": "^5.13.0",
+		"tslint": "^5.13.1",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.3.3333",
-		"util.fixture": "0.0.68",
-		"util.pkgwrap": "^0.0.102"
+		"util.fixture": "0.0.69",
+		"util.pkgwrap": "^0.0.104"
 	},
 	"pkgwrap": {
 		"cleanup": [
@@ -70,9 +70,10 @@
 	},
 	"scripts": {
 		"all": "yarn install && yarn build && yarn test",
-		"build": "yarn clean && yarn lint && yarn prettier && yarn build:es && yarn build:umd",
+		"build": "yarn clean && yarn lint && yarn prettier && yarn build:es && yarn build:umd && yarn build:cli",
 		"build:es": "tsc -p . && minify index.js --out-file index.es.min.js",
 		"build:umd": "babel index.js --out-file index.umd.min.js",
+		"build:cli": "babel cli.js --out-file cli.js",
 		"clean": "pkgwrap --clean",
 		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
 		"coverage": "pkgwrap --coverage --jest",
