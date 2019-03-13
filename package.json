@@ -1,6 +1,6 @@
 {
 	"name": "util.merge-packages",
-	"version": "0.0.16",
+	"version": "0.0.17",
 	"author": "jmquigley <jmquigley@outlook.com>",
 	"description": "Merges the contents of two package.json files",
 	"private": false,
@@ -32,7 +32,7 @@
 		"lodash": "^4.17.11",
 		"semver": "^5.6.0",
 		"semver-set": "^0.1.1",
-		"util.toolbox": "0.0.73",
+		"util.toolbox": "0.0.74",
 		"uuid": "^3.3.2",
 		"yargs": "^13.2.2"
 	},
@@ -44,22 +44,22 @@
 		"@babel/preset-typescript": "^7.3.3",
 		"@babel/runtime": "^7.3.4",
 		"@types/fs-extra": "^5.0.5",
-		"@types/jest": "^24.0.9",
-		"@types/lodash": "^4.14.122",
-		"@types/node": "^11.10.5",
+		"@types/jest": "^24.0.11",
+		"@types/lodash": "^4.14.123",
+		"@types/node": "^11.11.3",
 		"@types/semver": "^5.5.0",
 		"@types/yargs": "^12.0.9",
 		"babel-minify": "^0.5.0",
 		"babel-preset-minify": "^0.5.0",
 		"coveralls": "^3.0.3",
 		"fs-extra": "^7.0.1",
-		"jest": "^24.3.1",
+		"jest": "^24.5.0",
 		"prettier": "^1.16.4",
 		"tslint": "^5.13.1",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.3.3333",
-		"util.fixture": "0.0.69",
-		"util.pkgwrap": "^0.0.104"
+		"util.fixture": "0.0.72",
+		"util.pkgwrap": "^0.0.105"
 	},
 	"pkgwrap": {
 		"cleanup": [
@@ -69,7 +69,7 @@
 		]
 	},
 	"scripts": {
-		"all": "yarn install && yarn build && yarn test",
+		"all": "yarn install && yarn build && yarn test && yarn manifest",
 		"build": "yarn clean && yarn lint && yarn prettier && yarn build:es && yarn build:umd && yarn build:cli",
 		"build:es": "tsc -p . && minify index.js --out-file index.es.min.js",
 		"build:umd": "babel index.js --out-file index.umd.min.js",
@@ -78,7 +78,7 @@
 		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
 		"coverage": "pkgwrap --coverage --jest",
 		"lint": "pkgwrap --lint",
-		"prepublishOnly": "yarn run all",
+		"manifest": "npm pack --dry-run",
 		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\"",
 		"test": "jest"
 	}

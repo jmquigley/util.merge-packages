@@ -2,12 +2,11 @@
 
 import * as _ from "lodash";
 import * as path from "path";
-import {Fixture} from "util.fixture";
+import {cleanup, Fixture} from "util.fixture";
 import merge from "../index";
-import {cleanup} from "./helpers";
 
 afterAll((done) => {
-	cleanup(path.basename(__filename), done);
+	cleanup({done, message: path.basename(__filename)});
 });
 
 test("Combine a regular package.json with a dependencies", () => {
