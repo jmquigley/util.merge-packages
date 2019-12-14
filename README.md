@@ -2,12 +2,11 @@
 
 > Merges the contents of two package.json files
 
-[![build](https://circleci.com/gh/jmquigley/util.merge-packages/tree/master.svg?style=shield)](https://circleci.com/gh/jmquigley/util.merge-packages/tree/master)
+[![build](https://github.com/jmquigley/util.merge-packages/workflows/build/badge.svg)](https://github.com/jmquigley/util.merge-packages/actions)
 [![analysis](https://img.shields.io/badge/analysis-tslint-9cf.svg)](https://palantir.github.io/tslint/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![testing](https://img.shields.io/badge/testing-jest-blue.svg)](https://facebook.github.io/jest/)
 [![NPM](https://img.shields.io/npm/v/util.merge-packages.svg)](https://www.npmjs.com/package/util.merge-packages)
-[![coverage](https://coveralls.io/repos/github/jmquigley/util.merge-packages/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.merge-packages?branch=master)
 
 It attempts to combine two separate `package.json` files into one, respecting as much existing content as possible including already existing dependencies and `package.json` formatting.
 

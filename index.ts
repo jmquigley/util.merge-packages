@@ -1,8 +1,6 @@
-"use strict";
-
 import * as _ from "lodash";
 import * as semver from "semver";
-import {encoding} from "util.toolbox";
+import {encoding} from "util.constants";
 
 const json = require("jju");
 const intersect = require("semver-set").intersect;

@@ -3,11 +3,8 @@
 //
 // Command line that allows one to combine two package.json files together.
 //
-
-"use strict";
-
 import * as fs from "fs-extra";
-import {encoding, failure} from "util.toolbox";
+import {encoding, failure} from "util.constants";
 import merge from "./index";
 
 const yargs = require("yargs")

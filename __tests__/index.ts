@@ -1,5 +1,3 @@
-"use strict";
-
 import * as _ from "lodash";
 import * as path from "path";
 import {cleanup, Fixture} from "util.fixture";
