@@ -32,7 +32,7 @@
 		"jju": "^1.4.0",
 		"lodash": "^4.17.15",
 		"semver": "^6.3.0",
-		"semver-set": "^0.1.1",
+		"semver-intersect": "^1.4.0",
 		"util.constants": "^0.0.30",
 		"uuid": "^3.3.3",
 		"yargs": "^15.0.2"

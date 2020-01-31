@@ -3,7 +3,7 @@ import * as semver from "semver";
 import {encoding} from "util.constants";
 
 const json = require("jju");
-const intersect = require("semver-set").intersect;
+const intersect = require("semver-intersect").intersect;
 
 const handlers = {
 	keywords: unique,
@@ -40,9 +40,15 @@ function updateDependencies(dst: any, src: any) {
 					const isSem =
 						semver.validRange(version) &&
 						semver.validRange(dst[dep]);
-					return isSem
-						? intersect(version, dst[dep]) || version
-						: version;
+					if (isSem){
+						try {
+							return intersect(version, dst[dep]);
+						} catch (_) {
+							return version;
+						}
+					} else {
+						return version;
+					}
 				})
 		  );
 }
