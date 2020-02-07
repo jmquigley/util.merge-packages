@@ -40,7 +40,7 @@ function updateDependencies(dst: any, src: any) {
 					const isSem =
 						semver.validRange(version) &&
 						semver.validRange(dst[dep]);
-					if (isSem){
+					if (isSem) {
 						try {
 							return intersect(version, dst[dep]);
 						} catch (_) {

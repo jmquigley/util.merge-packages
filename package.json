@@ -1,6 +1,6 @@
 {
 	"name": "util.merge-packages",
-	"version": "0.0.18",
+	"version": "0.0.19",
 	"author": "jmquigley <jmquigley@outlook.com>",
 	"description": "Merges the contents of two package.json files",
 	"private": false,
